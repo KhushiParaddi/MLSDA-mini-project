@@ -1,0 +1,4 @@
+Test Case ID,Category,Query,Dense Recall@3,Metadata-Filtered Recall@3,Hybrid Recall@3,Top Hybrid Chunk
+TC-001,Single-Clause Calculation (Passage A),"What are the front, rear, and side setbacks required for a b...",100.0%,100.0%,100.0%,Passage_A_Setbacks_chunk_001
+TC-002,Conditional Restriction (Passage B),What is the maximum permissible building height if the abutt...,100.0%,100.0%,100.0%,Passage_A_Setbacks_chunk_001
+TC-003,Multi-Clause Conflict / Edge Case (Passage A + B),Can a 25-meter tall high-rise building be constructed on a s...,100.0%,100.0%,100.0%,Passage_A_Setbacks_chunk_001

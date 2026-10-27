@@ -1,0 +1,26 @@
+ID,Query,Expected Verdict,Dense/Hybrid Retrieval,Top Match Chunk
+SYN-TC-001,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-002,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-003,Is it permissible to construct a building of height 15.0m on...,PROHIBITED,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-004,Is it permissible to construct a building of height 11.5m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-005,Is it permissible to construct a building of height 24.5m on...,PROHIBITED,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-006,Is it permissible to construct a building of height 24.5m on...,PROHIBITED,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-007,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-008,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-009,Is it permissible to construct a building of height 24.5m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-010,Is it permissible to construct a building of height 15.0m on...,PROHIBITED,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-011,Is it permissible to construct a building of height 15.0m on...,PROHIBITED,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-012,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-013,Is it permissible to construct a building of height 15.0m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-014,Is it permissible to construct a building of height 24.5m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-015,Is it permissible to construct a building of height 12.0m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-016,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-017,Is it permissible to construct a building of height 11.5m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-018,Is it permissible to construct a building of height 12.0m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-019,Is it permissible to construct a building of height 12.0m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-020,Is it permissible to construct a building of height 24.5m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-021,Is it permissible to construct a building of height 15.0m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-022,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-023,Is it permissible to construct a building of height 9.0m on ...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-024,Is it permissible to construct a building of height 12.0m on...,PERMITTED_WITH_SETBACKS,PASS,Passage_A_Setbacks_chunk_001
+SYN-TC-025,Is it permissible to construct a building of height 24.5m on...,PROHIBITED,PASS,Passage_A_Setbacks_chunk_001

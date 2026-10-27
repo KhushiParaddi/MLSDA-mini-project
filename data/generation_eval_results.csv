@@ -1,0 +1,4 @@
+Test Case ID,Category,Query,Context Grounding,Target Compliance,Reasoning Summary
+TC-001,Single-Clause Calculation (Passage A),"What are the front, rear, and side setbacks required fo...",PASS,MATCHES GROUND TRUTH,"Under BDA Table 8 (Plot depth > 12m to 18m, height <= 11.5m): Front setback is 12% of dept..."
+TC-002,Conditional Restriction (Passage B),What is the maximum permissible building height if the ...,PASS,MATCHES GROUND TRUTH,"According to Clause 4.1.2(ii)(b), if the abutting road width is less than 9.0 meters, the ..."
+TC-003,Multi-Clause Conflict / Edge Case (Passage A + B),Can a 25-meter tall high-rise building be constructed o...,PASS,MATCHES GROUND TRUTH,"No. Under Clause 9.3.3 and Clause 4.1.2 notes, any building exceeding 11.5m (or classified..."

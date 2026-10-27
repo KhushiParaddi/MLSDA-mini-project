@@ -1,0 +1,60 @@
+{
+    "metadata": {
+        "version": "1.0",
+        "created_at": "2026-10-26",
+        "corpora": [
+            "BDA RMP-2015 (F1)",
+            "BBMP Building Bye-Laws 2003 (F2)"
+        ],
+        "passages": [
+            "Passage A (Setbacks)",
+            "Passage B (Road Width & Height)"
+        ]
+    },
+    "test_cases": [
+        {
+            "id": "TC-001",
+            "category": "Single-Clause Calculation (Passage A)",
+            "document_source": "BDA RMP-2015, Table 8 / BBMP Bye-Laws Table 4",
+            "query": "What are the front, rear, and side setbacks required for a building with a height of 10 meters on a plot of width 10m and depth 15m under standard regulations?",
+            "ground_truth": {
+                "front_setback_meters": 1.8,
+                "rear_setback_meters": 1.2,
+                "left_side_setback_meters": 0.8,
+                "right_side_setback_meters": 0.8,
+                "reasoning": "Under BDA Table 8 (Plot depth > 12m to 18m, height <= 11.5m): Front setback is 12% of depth (15m * 0.12 = 1.8m). Rear setback is 8% of depth (15m * 0.08 = 1.2m). Left and Right side setbacks are 8% of width (10m * 0.08 = 0.8m)."
+            },
+            "expected_chunks": [
+                "Passage A (Table 8)"
+            ]
+        },
+        {
+            "id": "TC-002",
+            "category": "Conditional Restriction (Passage B)",
+            "document_source": "BDA Zonal Regulations Section 4.1.2(ii)(b)",
+            "query": "What is the maximum permissible building height if the abutting road width is less than 9.0 meters in a Residential (Main) zone?",
+            "ground_truth": {
+                "max_height_meters": 11.5,
+                "max_floors": "Stilt + GF + 2 Upper Floors",
+                "reasoning": "According to Clause 4.1.2(ii)(b), if the abutting road width is less than 9.0 meters, the maximum permissible height is capped at 11.5 meters or Stilt + GF + 2 floors (whichever is less), irrespective of permissible FAR."
+            },
+            "expected_chunks": [
+                "Passage B (Clause 4.1.2)"
+            ]
+        },
+        {
+            "id": "TC-003",
+            "category": "Multi-Clause Conflict / Edge Case (Passage A + B)",
+            "document_source": "BDA Zonal Regulations Sec 4.1.2 & BBMP Bye-Laws Sec 9.3.3",
+            "query": "Can a 25-meter tall high-rise building be constructed on a site abutting an 8-meter wide road?",
+            "ground_truth": {
+                "permitted": false,
+                "reasoning": "No. Under Clause 9.3.3 and Clause 4.1.2 notes, any building exceeding 11.5m (or classified as high-rise > 15m) requires a minimum abutting road width of at least 12.0 meters. Since the road width is 8.0 meters, high-rise construction is strictly prohibited."
+            },
+            "expected_chunks": [
+                "Passage A (Table 8 Note 2)",
+                "Passage B (Clause 3.2.1)"
+            ]
+        }
+    ]
+}

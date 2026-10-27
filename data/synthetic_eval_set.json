@@ -1,0 +1,383 @@
+{
+    "metadata": {
+        "total_synthetic_samples": 25,
+        "description": "Synthetic stress test dataset targeting boundary conditions."
+    },
+    "test_cases": [
+        {
+            "id": "SYN-TC-001",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 8.0m and width 5.5m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 8.0x5.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-002",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 8.0m and width 8.5m abutting an 9.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 9.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 8.0x8.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-003",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 15.0m on a plot of depth 8.0m and width 11.0m abutting an 8.5m wide road?",
+            "ground_truth": {
+                "verdict": "PROHIBITED",
+                "height": 15.0,
+                "road_width": 8.5,
+                "reasoning": "Road width (8.5m) < 9.0m strictly restricts height to 11.5m maximum."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-004",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 11.5m on a plot of depth 8.0m and width 15.0m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 11.5,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 11.5m and plot size 8.0x15.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-005",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 24.5m on a plot of depth 8.0m and width 22.0m abutting an 6.0m wide road?",
+            "ground_truth": {
+                "verdict": "PROHIBITED",
+                "height": 24.5,
+                "road_width": 6.0,
+                "reasoning": "Road width (6.0m) < 9.0m strictly restricts height to 11.5m maximum."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-006",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 24.5m on a plot of depth 10.5m and width 5.5m abutting an 6.0m wide road?",
+            "ground_truth": {
+                "verdict": "PROHIBITED",
+                "height": 24.5,
+                "road_width": 6.0,
+                "reasoning": "Road width (6.0m) < 9.0m strictly restricts height to 11.5m maximum."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-007",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 10.5m and width 8.5m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 10.5x8.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-008",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 10.5m and width 11.0m abutting an 12.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 12.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 10.5x11.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-009",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 24.5m on a plot of depth 10.5m and width 15.0m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 24.5,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 24.5m and plot size 10.5x15.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-010",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 15.0m on a plot of depth 10.5m and width 22.0m abutting an 8.5m wide road?",
+            "ground_truth": {
+                "verdict": "PROHIBITED",
+                "height": 15.0,
+                "road_width": 8.5,
+                "reasoning": "Road width (8.5m) < 9.0m strictly restricts height to 11.5m maximum."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-011",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 15.0m on a plot of depth 14.0m and width 5.5m abutting an 6.0m wide road?",
+            "ground_truth": {
+                "verdict": "PROHIBITED",
+                "height": 15.0,
+                "road_width": 6.0,
+                "reasoning": "Road width (6.0m) < 9.0m strictly restricts height to 11.5m maximum."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-012",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 14.0m and width 8.5m abutting an 6.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 6.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 14.0x8.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-013",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 15.0m on a plot of depth 14.0m and width 11.0m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 15.0,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 15.0m and plot size 14.0x11.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-014",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 24.5m on a plot of depth 14.0m and width 15.0m abutting an 12.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 24.5,
+                "road_width": 12.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 24.5m and plot size 14.0x15.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-015",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 12.0m on a plot of depth 14.0m and width 22.0m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 12.0,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 12.0m and plot size 14.0x22.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-016",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 20.0m and width 5.5m abutting an 12.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 12.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 20.0x5.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-017",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 11.5m on a plot of depth 20.0m and width 8.5m abutting an 6.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 11.5,
+                "road_width": 6.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 11.5m and plot size 20.0x8.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-018",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 12.0m on a plot of depth 20.0m and width 11.0m abutting an 12.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 12.0,
+                "road_width": 12.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 12.0m and plot size 20.0x11.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-019",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 12.0m on a plot of depth 20.0m and width 15.0m abutting an 12.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 12.0,
+                "road_width": 12.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 12.0m and plot size 20.0x15.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-020",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 24.5m on a plot of depth 20.0m and width 22.0m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 24.5,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 24.5m and plot size 20.0x22.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-021",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 15.0m on a plot of depth 26.0m and width 5.5m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 15.0,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 15.0m and plot size 26.0x5.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-022",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 26.0m and width 8.5m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 26.0x8.5m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-023",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 9.0m on a plot of depth 26.0m and width 11.0m abutting an 8.5m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 9.0,
+                "road_width": 8.5,
+                "reasoning": "Calculated under BDA Table 8/9 for height 9.0m and plot size 26.0x11.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-024",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 12.0m on a plot of depth 26.0m and width 15.0m abutting an 18.0m wide road?",
+            "ground_truth": {
+                "verdict": "PERMITTED_WITH_SETBACKS",
+                "height": 12.0,
+                "road_width": 18.0,
+                "reasoning": "Calculated under BDA Table 8/9 for height 12.0m and plot size 26.0x15.0m."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        },
+        {
+            "id": "SYN-TC-025",
+            "category": "Synthetic Edge Case",
+            "query": "Is it permissible to construct a building of height 24.5m on a plot of depth 26.0m and width 22.0m abutting an 6.0m wide road?",
+            "ground_truth": {
+                "verdict": "PROHIBITED",
+                "height": 24.5,
+                "road_width": 6.0,
+                "reasoning": "Road width (6.0m) < 9.0m strictly restricts height to 11.5m maximum."
+            },
+            "expected_chunks": [
+                "Passage_A_Setbacks",
+                "Passage_B_Road_Width"
+            ]
+        }
+    ]
+}
