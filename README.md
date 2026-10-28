@@ -269,4 +269,5 @@ This project is for coursework and experimentation. Retrieved text can be incomp
 
 ## Authors
 
-Add the project team members and student details here.
+KR Tanishkaa
+Khushi Paraddi
